@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+
+        <style>
+            body {
+                margin: 0px;
+                padding: 0px;
+
+                background: linear-gradient(#42b6d6, #2f8096);
+                width: 100vw;
+                height: 100vh;
+            }
+
+            #counter {
+                display: block;
+                text-align: center;
+                font-weight: 700;
+                font-family: 'Noto Sans KR', sans-serif;
+                font-size: 5vw;
+                height: 100vh;
+                line-height: 100vh;
+                color: white;
+            }
+        </style>
+
+        <script>
+            const countDownTimer = function (id, date) {
+                var _vDate = new Date(date); // 전달 받은 일자
+                var _second = 1000;
+                var _minute = _second * 60;
+                var _hour = _minute * 60;
+                var _day = _hour * 24;
+                var timer;
+
+                function showRemaining() {
+                    var now = new Date();
+                    var distDt = _vDate - now;
+
+                    if (distDt < 0) {
+                        clearInterval(timer);
+                        document.getElementById(id).textContent = '와! 생일!';
+                        return;
+                    }
+
+                    var days = Math.floor(distDt / _day);
+                    var hours = Math.floor((distDt % _day) / _hour);
+                    var minutes = Math.floor((distDt % _hour) / _minute);
+                    var seconds = Math.floor((distDt % _minute) / _second);
+
+                    //document.getElementById(id).textContent = date.toLocaleString() + "까지 : ";
+                    document.getElementById(id).textContent = days + '일 ';
+                    document.getElementById(id).textContent += hours + '시간 ';
+                    document.getElementById(id).textContent += minutes + '분 ';
+                    document.getElementById(id).textContent += seconds + '초';
+                }
+
+                timer = setInterval(showRemaining, 20);
+            }
+
+            var dateObj = new Date();
+            dateObj.setDate(dateObj.getDate() + 1);
+
+            countDownTimer('counter', '06/17/2022 00:00 AM');
+        </script>
+    </head>
+
+    <body>
+        <div id="counter"></div>
+    </body>
+</html>
