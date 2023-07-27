@@ -3,11 +3,13 @@ body {
     padding: 0px;
 
     background: linear-gradient(#42b6d6, #2f8096);
+
     width: 100vw;
+    height: 100vh;
     overflow: hidden;
 }
 
-#counter {
+.counter {
     display: flex;
     text-align: center;
     align-items: center;
@@ -22,4 +24,39 @@ body {
     font-size: 5vw;
 
     color: white;
+}
+
+#counter-done {
+    margin-top: 6.5vh;
+}
+
+#youtube-player {
+    width: calc(70vh / 9 * 16);
+    height: 70vh;
+}
+
+#video {
+    display: flex;
+    position: absolute;
+    
+    top: 0px;
+    width: 100vw;
+    height: 100vh;
+
+    align-items: center;
+    justify-content: center;
+    z-index: 0;
+}
+
+#panel {
+    display: flex;
+    position: absolute;
+    
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.01);
 }
