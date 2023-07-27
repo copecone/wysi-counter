@@ -1,0 +1,25 @@
+body {
+    margin: 0px;
+    padding: 0px;
+
+    background: linear-gradient(#42b6d6, #2f8096);
+    width: 100vw;
+    overflow: hidden;
+}
+
+#counter {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+    height: 0px;
+    margin-top: 50vh;
+    margin-bottom: 50vh;
+
+    font-weight: 700;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 5vw;
+
+    color: white;
+}
