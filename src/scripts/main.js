@@ -38,8 +38,12 @@ document.addEventListener("DOMContentLoaded", () => {
 			//document.getElementById(id).textContent = date.toLocaleString() + "까지 : ";
 			if (days > 0) text.textContent = days.fillZero(2) + '일 '
 			if (hours > 0) text.textContent += hours.fillZero(2) + '시간 '
-			text.textContent += minutes.fillZero(2) + '분 '
-			text.textContent += seconds.fillZero(2) + '초'
+			if (minutes > 0) {
+				text.textContent += minutes.fillZero(2) + '분 '
+				text.textContent += seconds.fillZero(2) + '초'
+			} else {
+				text.textContent += seconds.fillZero(2)
+			}
 
 			requestAnimationFrame(showRemaining);
 		}
