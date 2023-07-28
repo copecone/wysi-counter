@@ -117,5 +117,5 @@ document.addEventListener("DOMContentLoaded", () => {
 	var dateObj = new Date();
 	dateObj.setDate(dateObj.getDate() + 1);
 
-	countDownTimer('counter', '07/27/2023 07:27:27 PM');
+	countDownTimer('counter', '07/27/2024 07:27:27 PM');
 })
